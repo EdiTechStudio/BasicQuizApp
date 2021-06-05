@@ -8,7 +8,7 @@ class AnswerInline(admin.TabularInline):
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    inline = [AnswerInline]
+    inlines = [AnswerInline]
 
 
 admin.site.register(Question, QuestionAdmin)
