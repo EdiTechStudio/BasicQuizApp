@@ -24,4 +24,4 @@ class Quiz(models.Model):
 
 
 def get_questions(self):
-    return self.question_self.all()  # Need to understand this line
+    return self.ques_ans_self.all()  # Need to understand this line
