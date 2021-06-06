@@ -26,3 +26,4 @@ class Quiz(models.Model):
 def get_questions(self):
     # Need to understand this line
     return self.ques_ans_self.all()[:self.number_Of_Questions]
+# Simple change
