@@ -9,11 +9,11 @@ DIFFICULTY_CHOICES = (
 class Quiz(models.Model):
     name = models.CharField(max_length=120)
     topic = models.CharField(max_length=120)
-    numberOfQuestions = models.IntegerField()
+    number_Of_Questions = models.IntegerField()
     time = models.IntegerField(help_text='Duration of quiz in minutes.')
-    requiredScoredToPass = models.IntegerField(
+    required_Score_To_Pass = models.IntegerField(
         help_text='Required score to pass in %')
-    difficulty = models.IntegerField(max_length=1, choices=DIFFICULTY_CHOICES)
+    difficulty = models.IntegerField(choices=DIFFICULTY_CHOICES)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
