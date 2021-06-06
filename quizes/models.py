@@ -2,7 +2,9 @@ from django.db import models
 
 # Create your models here.
 DIFFICULTY_CHOICES = (
-    (1, 'easy'), (2, 'intermediate'), (3, 'difficult')
+    ('Easy', 'Easy'),
+    ('Intermediate', 'Intermediate'),
+    ('Difficult', 'Difficult'),
 )
 
 
@@ -13,7 +15,7 @@ class Quiz(models.Model):
     time = models.IntegerField(help_text='Duration of quiz in minutes.')
     required_Score_To_Pass = models.IntegerField(
         help_text='Required score to pass in %')
-    difficulty = models.IntegerField(choices=DIFFICULTY_CHOICES)
+    difficulty = models.CharField(max_length=12, choices=DIFFICULTY_CHOICES)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
