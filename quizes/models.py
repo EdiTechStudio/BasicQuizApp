@@ -24,8 +24,7 @@ class Quiz(models.Model):
     def __str__(self):
         return self.name
 
-
-def get_questions(self):
-    # Need to understand this line
-    return self.ques_ans_self.all()[:self.number_Of_Questions]
+    def get_questions(self):
+        # Need to understand this line
+        return self.ques_ans_self.all()[:self.number_Of_Questions]
 # Simple change
